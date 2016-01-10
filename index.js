@@ -11,4 +11,4 @@ class Container extends React.Component {
 Container.propTypes = {};
 Container.defaultProps = {};
 
-export default react-container;
+export default Container;
