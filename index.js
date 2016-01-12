@@ -4,11 +4,17 @@ class Container extends React.Component {
 
   constructor (props) {
     super(props);
+    this.state = {};
   }
 
   render () {
+    const items = this.props.children((item) => {
+      return item;
+    });
     return {
-      <div></div>
+      <div className={this.props.cls}>
+        {items}
+      </div>
     };
   }
 
@@ -19,11 +25,13 @@ Container.defaultProps = {
   width: null,
   hidden: false,
   id: void 0,
-  cls: null,
+  cls: 'container',
   padding: null,
   style: null
 };
 
-Container.propTypes = {};
+Container.propTypes = {
+  cls: React.PropTypes.string
+};
 
 export default Container;
