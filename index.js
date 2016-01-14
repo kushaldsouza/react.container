@@ -8,26 +8,30 @@ class Container extends React.Component {
   }
 
   render () {
-    const items = this.props.children((item) => {
-      return item;
-    });
-    return {
-      <div className={this.props.cls}>
-        {items}
+    const { config, style, cls, children, scrollable } = this.props;
+    Object.assign(style, config);
+    style.overflowY = scrollable ? 'scroll' : 'visible';
+
+    return (
+      <div ref={cls} className={cls} style={style}>
+        {children}
       </div>
-    };
+    );
   }
 
-}
+};
 
 Container.defaultProps = {
-  height: null,
-  width: null,
   hidden: false,
   id: void 0,
   cls: 'container',
-  padding: null,
-  style: null
+  style: {
+    padding: 10,
+    height: '100%',
+    width: '100%',
+    position: 'relative',
+    display: 'block'
+  }
 };
 
 Container.propTypes = {
