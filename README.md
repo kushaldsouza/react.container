@@ -1,5 +1,7 @@
 # react-container
 
+> react-container is a reusable react component, build with ES2015.
+
 The MIT License (MIT)
 
 Copyright (c) 2016 React-Components-Organization
