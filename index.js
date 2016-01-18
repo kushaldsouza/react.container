@@ -1,7 +1,7 @@
  /**
   *
   * <Container scrollable direction={'vertical'} style={config}/>
-  *
+  * @class
   */
  import React from 'react';
 
