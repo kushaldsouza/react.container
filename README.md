@@ -1,6 +1,6 @@
 # react-container
 
-A flexible react-container is a reusable react component, build with ES2015.
+A flexible and reusable react component, build with ES2015.
 
 ## Installation
 
