@@ -1,47 +1,53 @@
-/**
- *
- * <Container scrollable direction={'vertical'} />
- *
- */
-import React from 'react';
+ /**
+  *
+  * <Container scrollable direction={'vertical'} style={config}/>
+  *
+  */
+ import React from 'react';
 
-class Container extends React.Component {
+ class Container extends React.Component {
 
-  constructor (props) {
-    super(props);
-    this.props.direction === 'veritcal' ? this.style.overflowY : this.style.overflowX;
-    this.style.overflowY = scrollable ? 'scroll' : 'visible';
-    this.state = {};
-  }
+   constructor (props) {
+     super(props);
+     let { style, scrollable, config, direction, hidden } = this.props;
+     let scrolling = (direction === 'vertical') ? 'overflowY' : 'overflowX';
+     style[scrolling] = scrollable ? 'scroll' : 'visible';
+     style.display = hidden ? 'none' : 'block';
+     Object.assign(style, config);
+     this.state = {};
+   }
 
-  render () {
-    const { config, style, cls, children, scrollable } = this.props;
-    Object.assign(style, config);
+   render () {
+     const { config, style, cls, children, id } = this.props;
 
-    return (
-      <div ref={cls} className={cls} style={style}>
-        {children}
-      </div>
-    );
-  }
+     return (
+       <div id={id} ref={cls} className={cls} style={style}>
+         {children}
+       </div>
+     );
+   }
 
-};
+ };
 
-Container.defaultProps = {
-  hidden: false,
-  id: void 0,
-  cls: 'container',
-  style: {
-    padding: 10,
-    height: '100%',
-    width: '100%',
-    position: 'relative',
-    display: 'block'
-  }
-};
+ Container.defaultProps = {
+   hidden: false,
+   id: void 0,
+   cls: 'container',
+   style: {
+     padding: 10,
+     height: '100%',
+     width: '100%',
+     position: 'relative',
+     display: 'block'
+   }
+ };
 
-Container.propTypes = {
-  cls: React.PropTypes.string
-};
+ Container.propTypes = {
+   cls: React.PropTypes.string,
+   children: React.PropTypes.node,
+   scrollable: React.PropTypes.bool,
+   direction: React.PropTypes.oneOf(['vertical', 'horizontal']),
+   style: React.PropTypes.object
+ };
 
-export default Container;
+ export default Container;
