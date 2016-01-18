@@ -1,16 +1,22 @@
+/**
+ *
+ * <Container scrollable direction={'vertical'} />
+ *
+ */
 import React from 'react';
 
 class Container extends React.Component {
 
   constructor (props) {
     super(props);
+    this.props.direction === 'veritcal' ? this.style.overflowY : this.style.overflowX;
+    this.style.overflowY = scrollable ? 'scroll' : 'visible';
     this.state = {};
   }
 
   render () {
     const { config, style, cls, children, scrollable } = this.props;
     Object.assign(style, config);
-    style.overflowY = scrollable ? 'scroll' : 'visible';
 
     return (
       <div ref={cls} className={cls} style={style}>
