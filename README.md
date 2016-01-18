@@ -1,6 +1,14 @@
 # react-container
 
-> react-container is a reusable react component, build with ES2015.
+A flexible react-container is a reusable react component, build with ES2015.
+
+## Installation
+
+## Usage
+
+### Properties
+
+## License
 
 The MIT License (MIT)
 
