@@ -1,6 +1,8 @@
 /*jshint esversion:6*/
 /**
  * @AUTHORS oliviercolonna@gmail.com
+ * Copyright(c) 2016 Olivier Colonna
+ * MIT Licensed
  * @class ReactContainer
  */
 import React from 'react';
