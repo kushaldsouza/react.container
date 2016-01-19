@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/React-Components-Organization/react-container/issues"
   },
-  "homepage": "https://github.com/React-Components-Organization/react-container#readme"
+  "homepage": "https://github.com/React-Components-Organization/react-container#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-react": "^3.1.0"
+  }
 }
