@@ -4,7 +4,7 @@ var gulp   = require('gulp');
 gulp.task('lint', function() {
   return gulp.src('./*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('YOUR_REPORTER_HERE'));
+    .pipe(jshint.reporter('default'));
 });
 
 gulp.task('default', ['lint']);
