@@ -1,4 +1,4 @@
-/*jshint esversion:6*/
+ /*jshint esversion:6*/
  /**
   * <Container scrollable direction={'vertical'} style={config}/>
   * @class Container
