@@ -16,9 +16,9 @@ npm install react.container --save
 ## Usage
 
 ```js
-    import ReactContainer from 'react.container';
+import ReactContainer from 'react.container';
 
-    <ReactContainer scrollable />
+<ReactContainer scrollable />
 ```
 
 ### Properties
