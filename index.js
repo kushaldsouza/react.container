@@ -84,9 +84,7 @@ class ReactContainer extends React.Component {
 ReactContainer.defaultProps = {
   hidden: false,
   id: void 0,
-  cls: '',
-  height: '100%',
-  width: '100%'
+  cls: ''
 };
 
 /**
