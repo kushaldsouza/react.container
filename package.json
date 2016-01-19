@@ -1,6 +1,6 @@
 {
-  "name": "react-container",
-  "version": "0.0.1",
+  "name": "react.container",
+  "version": "1.0.0",
   "description": "A generic React.js reusable Container",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "React.js",
-    "react-container"
+    "react.container"
   ],
   "author": "oliviercolonna@gmail.com",
   "license": "MIT",

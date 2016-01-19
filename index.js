@@ -1,11 +1,11 @@
  /*jshint esversion:6*/
  /**
-  * <Container scrollable direction={'vertical'} style={config}/>
-  * @class Container
+  * <ReactContainer scrollable direction={'vertical'} style={config}/>
+  * @class ReactContainer
   */
  import React from 'react';
 
- class Container extends React.Component {
+ class ReactContainer extends React.Component {
 
    constructor (props) {
      super(props);
@@ -29,7 +29,7 @@
 
  };
 
- Container.defaultProps = {
+ ReactContainer.defaultProps = {
    hidden: false,
    id: void 0,
    cls: 'container',
@@ -42,7 +42,7 @@
    }
  };
 
- Container.propTypes = {
+ ReactContainer.propTypes = {
    cls: React.PropTypes.string,
    children: React.PropTypes.node,
    scrollable: React.PropTypes.bool,
@@ -50,4 +50,4 @@
    style: React.PropTypes.object
  };
 
- export default Container;
+ export default ReactContainer;

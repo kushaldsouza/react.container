@@ -1,14 +1,26 @@
-# react-container
+# react-container [![Build Status](https://travis-ci.org/React-Components-Organization/react-container.svg?branch=master)](https://travis-ci.org/React-Components-Organization/react-container)
 
 A flexible and reusable react component, build with ES2015.
 
-[![Build Status](https://travis-ci.org/React-Components-Organization/react-container.svg?branch=master)](https://travis-ci.org/React-Components-Organization/react-container)
-
 ## Installation
+
+Install the module directly from npm:
+
+```
+npm install react.container --save
+```
 
 ## Usage
 
+```js
+    import ReactContainer from 'reactcontainer';
+
+    <ReactContainer scrollable />
+```
+
 ### Properties
+
+
 
 ## License
 
