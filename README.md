@@ -1,4 +1,5 @@
-# react-container [![Build Status](https://travis-ci.org/React-Components-Organization/react-container.svg?branch=master)](https://travis-ci.org/React-Components-Organization/react-container)
+# react-container
+[![Build Status](https://travis-ci.org/React-Components-Organization/react-container.svg?branch=master)](https://travis-ci.org/React-Components-Organization/react-container)
 
 A flexible and reusable react component, build with ES2015.
 
