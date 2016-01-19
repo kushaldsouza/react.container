@@ -18,7 +18,17 @@ npm install react.container --save
 ```js
 import ReactContainer from 'react.container';
 
-<ReactContainer scrollable />
+const config = {
+  backgroundColor: 'blue',
+  height: 300
+};
+
+// direction can be 'vertical' or 'horizontal'
+<ReactContainer scrollable direction={'vertical'} config={config}>
+  ...
+  ...
+  ...
+</ReactContainer>
 ```
 
 ### Properties
