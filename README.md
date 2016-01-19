@@ -18,22 +18,98 @@ npm install react.container --save
 ```js
 import ReactContainer from 'react.container';
 
+// config is an object containing javascript styling properties only
 const config = {
   backgroundColor: 'blue',
   height: 300
 };
 
 // direction can be 'vertical' or 'horizontal'
-<ReactContainer scrollable direction={'vertical'} config={config}>
-  ...
-  ...
+// hidden define if the container is visible or not, if hidden is not set container is // visible
+<ReactContainer scrollable direction={'vertical'} config={config} hidden>
   ...
 </ReactContainer>
 ```
 
 ### Properties
 
-Coming soon.
+#### scrollable {boolean}
+
+>**NOTE:** Configuration options to make this Container scrollable.
+
+```js
+<ReactContainer scrollable={true} />
+```
+
+#### direction {string}
+
+>**NOTE:** 'horizontal', 'vertical' to enabling scrolling for that direction.
+
+```js
+<ReactContainer scrollable={true} direction={'horizontal'} />
+```
+
+#### hidden {boolean}
+
+>**NOTE:** Whether or not this Component is hidden (its CSS display property is set to none).
+
+```js
+<ReactContainer hidden={true} />
+```
+
+#### cls {string}
+
+>**NOTE:** The CSS class to add to this component's element, in addition to the baseCls 'container'.
+
+```js
+<ReactContainer cls={'myCustomCls'} />
+```
+
+#### floating {object}
+
+>**NOTE:** true to make this Container floatable. This will make your Container in position 'absolute'.
+
+```js
+const floatingObject = {
+  top: 10,
+  bottom: 10,
+  right: 10,
+  left: 10
+};
+
+<ReactContainer floating={floatingObject} />
+```
+
+#### height {number}
+
+>**NOTE:** The height of this Component; must be a valid CSS length value, e.g: 300, 100px, 30%, etc. By default, if this is not explicitly set, this Component's element will simply have its own natural size.
+
+```js
+<ReactContainer height={100} />
+```
+
+#### width {number}
+
+>**NOTE:** The height of this Component; must be a valid CSS length value, e.g: 300, 100px, 30%, etc. By default, if this is not explicitly set, this Component's element will simply have its own natural size.
+
+```js
+<ReactContainer width={100} />
+```
+
+#### config {object}
+
+>**NOTE:** The most important property, object CSS styles that will be rendered into an inline style attribute when the Component is rendered. Any CSS style can be set in config.
+
+```js
+const configObj = {
+  backgroundColor: red,
+  height: 100,
+  width: 100,
+  position: 'relative'
+};
+
+<ReactContainer config={configObj} />
+```
 
 ## License
 
