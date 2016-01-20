@@ -4,6 +4,7 @@
  * Copyright(c) 2016 Olivier Colonna
  * MIT Licensed
  */
+
 import React from 'react';
 
 class ReactContainer extends React.Component {

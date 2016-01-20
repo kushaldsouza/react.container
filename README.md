@@ -27,7 +27,7 @@ const config = {
 // direction can be 'vertical' or 'horizontal'
 // hidden define if the container is visible or not, if hidden is not set container is // visible
 <ReactContainer scrollable direction={'vertical'} config={config} hidden>
-  ...
+  ... // child component live here
 </ReactContainer>
 ```
 
@@ -35,26 +35,31 @@ const config = {
 
 #### scrollable {boolean}
 
->**NOTE:** Configuration options to make this Container scrollable.
+>**NOTE:** Configuration options to make this Container scrollable. By default a container is not scrollable.
 
 ```js
 <ReactContainer scrollable={true} />
+
+<ReactContainer scrollable />
 ```
 
 #### direction {string}
 
->**NOTE:** 'horizontal', 'vertical' to enabling scrolling for that direction.
+>**NOTE:** 'horizontal', 'vertical' to enable scrolling for that direction.
 
 ```js
-<ReactContainer scrollable={true} direction={'horizontal'} />
+<ReactContainer scrollable direction={'horizontal'} />
 ```
 
 #### hidden {boolean}
 
->**NOTE:** Whether or not this Component is hidden (its CSS display property is set to none).
+>**NOTE:** Whether or not this Component is hidden (its a CSS 'display' property set to 'none').
 
 ```js
 <ReactContainer hidden={true} />
+
+
+<ReactContainer hidden />
 ```
 
 #### cls {string}
