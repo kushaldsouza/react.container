@@ -43,8 +43,22 @@ class ReactContainer extends React.Component {
    * @param {boolean} scrollable
    */
   applyScroll (config, direction, scrollable) {
-    let scrolling = (direction === 'vertical') ? 'overflowY' : 'overflowX';
-    config[scrolling] = scrollable ? 'scroll' : 'visible';
+    const y = 'overflowY';
+    const x = 'overflowX';
+
+    if(scrollable) {
+      if(direction === 'vertical') {
+        config[y] = 'scroll';
+        config[x] = 'hidden';
+      } else if(direction === 'horizontal') {
+        config[y] = 'hidden';
+        config[x] = 'scroll';
+      } else if(direction === 'both'){
+        config[y] = 'scroll';
+        config[x] = 'scroll';
+      }
+    }
+
     config.position = 'relative';
   }
 
@@ -96,12 +110,15 @@ ReactContainer.propTypes = {
   cls: React.PropTypes.string,
   children: React.PropTypes.node,
   scrollable: React.PropTypes.bool,
-  direction: React.PropTypes.oneOf(['vertical', 'horizontal']),
-  style: React.PropTypes.object,
+  direction: React.PropTypes.oneOf(['vertical', 'horizontal', 'both']),
+  config: React.PropTypes.object,
   hidden: React.PropTypes.bool,
   height: React.PropTypes.number,
   width: React.PropTypes.number,
-  floating: React.PropTypes.bool
+  floating: React.PropTypes.oneOfType([
+    React.PropTypes.bool,
+    React.PropTypes.object
+  ])
 };
 
 export default ReactContainer;

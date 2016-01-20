@@ -45,7 +45,7 @@ const config = {
 
 #### direction {string}
 
->**NOTE:** 'horizontal', 'vertical' to enable scrolling for that direction.
+>**NOTE:** 'horizontal', 'vertical' or 'both' to enable scrolling for that direction.
 
 ```js
 <ReactContainer scrollable direction={'horizontal'} />
@@ -57,7 +57,6 @@ const config = {
 
 ```js
 <ReactContainer hidden={true} />
-
 
 <ReactContainer hidden />
 ```
@@ -103,7 +102,7 @@ const floatingObject = {
 
 #### config {object}
 
->**NOTE:** The most important property, object CSS styles that will be rendered into an inline style attribute when the Component is rendered. Any CSS style can be set in config.
+>**NOTE:** The most important property, object CSS styles that will be rendered into an inline style attribute when the Component is rendered. Any CSS style can be set in config. By default a container is 'naked', so feel free to style it at will.
 
 ```js
 const configObj = {
