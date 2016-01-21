@@ -78,8 +78,10 @@ class ReactContainer extends React.Component {
    * @param {number} w
    */
   setSize (config, h, w) {
-    config.height = h;
-    config.width = w;
+    if(h || w) {
+      config.height = h;
+      config.width = w;
+    }
   }
 
   render () {
