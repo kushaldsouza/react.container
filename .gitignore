@@ -1,2 +1,4 @@
 node_modules
 npm-debug.log
+# folder to not push to github
+lib
