@@ -4,7 +4,12 @@ node_js:
   - 4.1
   - 4.0
 
-before_script:
+install:
   - npm install
 
-script: gulp
+script:
+  - npm test
+
+after_success:
+  - npm version patch
+  - npm publish
